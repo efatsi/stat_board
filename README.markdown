@@ -23,6 +23,11 @@ A simple dashboard of records created this week, this month, and all time, mount
 
 Models can also be listed as strings if you encounter any loading order issues.
 
+4. (optional) Define a StatBoard specific scope on models
+
+        class User < ApplicationRecord
+          scope :stat_board_scope, -> { where(awesome: true) }
+
 ## Routing
 
 You can access StatBoard like this:
